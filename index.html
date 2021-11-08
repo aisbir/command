@@ -10,13 +10,15 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body onoffline="a()">
       <!--nav-->
       <nav class="navbar navbar-light bg-light ms-auto">
         <div class="container-fluid">
           <a class="navbar-brand">Command database</a>
           <form class="d-flex">
             <input class="form-control me-2" type="text" id="myInput" onkeyup="myFunction()" placeholder="Data search"></form>
+            <div class="spinner-border spinner-border-sm" role="status" id="target">
+</div>
         </div>
       </nav>
       <!--nav-->
@@ -28,7 +30,7 @@
               <td><hr><h1>Sell command</h1>
                 <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgRWXdhNO1tlmfdsRnwlPi27Re3d97NjB2WV6AnbKgVB2n_sjk1P-BWxBg0HOUnR-CowGpBbfhseseQg_4twkHL6kLSUKa7hEA9-XmGwCmeo2DTdnSoBuw0upfJ_FzdpT52FoxovwT4TWmwV6fnZGe9IOmZc8ZXxzopfbHDitSNoKeXRNXysIg2WI0c=s957" width="300"><div class="row">
                     <div class="col">
-                      <input type="text" class="form-control" value='execute @a[x=?,y=?,z=?,r=2,c=1]~~~titleraw @s actionbar {"rawtext":[{"translate":"+"},{"score":{"name":"*","objective":"money"}},{"translate":"$"}]}' readonly id="sell_satu">
+                      <input type="text" value='execute @a[x=?,y=?,z=?,r=2,c=1]~~~titleraw @s actionbar {"rawtext":[{"translate":"+"},{"score":{"name":"*","objective":"money"}},{"translate":"$"}]}' readonly id="sell_satu">
                       <div class="d-flex" style="width: 10px;">
                         <div class="vr"></div>
                       </div>
@@ -37,9 +39,8 @@
                       </button>
                     </div>
                     <div class="col">
-                      <input type="text" class="form-control" value='execute @a[x=?,y=?,z=?,r=2,c=1]~~~tellraw @s {"rawtext":[{"translate":"§aBerhasil menjual diamond total: §d"},{"score":{"name":"*","objective":"dm"}},{"translate":" @"}]}' aria-label="Last name" id="sell_dua" readonly>
-                      <button type="button" class="btn btn-primary" onclick="sel_2()">
-                        copy command <span class="badge bg-secondary">2</span>
+                      <input type="text" value='execute @a[x=?,y=?,z=?,r=2,c=1]~~~tellraw @s {"rawtext":[{"translate":"§aBerhasil menjual diamond total: §d"},{"score":{"name":"*","objective":"dm"}},{"translate":" @"}]}' aria-label="Last name" id="sell_dua" readonly>
+                      <button type="button" class="btn btn-primary" onclick="sel_2()"> copy command <span class="badge bg-secondary">2</span>
                       </button>
                     </div>
                   </div>
@@ -61,9 +62,9 @@
             <!--start-->
               <tr>
                   <td><hr><h1>scoreboard viva</h1>
-                    <img src="https://media.discordapp.net/attachments/897801206049685545/907274808608321586/Screenshot_2021_1108_212357.png" width="300"><div class="row"></div>
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEihaSVzznW2XLL3PLO-mwmHZ_W0Takt2jE_FdSu3C42ins9zuDTqSCfaEAkGGs-QleEjU6GQpzBzjeoOI0ix2iit15gkSPrRn26Y2odM70YuCQm_wGk7cbcNihLxjl6wF6YKOYeTs1FBp2xCfjm9GwYq1QwWS0QLELxgicen6aIMCoQTRC9S9hTcS1f=s956" width="300"><div class="row"></div>
                     <div class="col">
-                        <input type="text" class="form-control" value='/execute @a~~~titleraw @s title {"rawtext":[{"text":" §a§lVivaSMP§r§7 I 10\n\n§a§lI§r Nama:§e "},{"selector":"@s"},{"translate":"\n§a§lI§r Ping:§e "},{"score":{"name":"*","objective":"ping"}},{"translate":"\n§a§lI§r Uang: §eRp."},{"score":{"name":"*","objective":"money"}},{"translate":"\n§a§lI§r Waktu:§e "},{"score":{"name":"*","objective":"waktu"}},{"translate":" WIB\n§a§lI§r Tps: §e"},{"score":{"name":"*","objective":"tps"}},{"translate":"\n§a§lI§r Tier: §e5"},{"translate":"\n§a§lI§r Quest: §e 6\n\n§r§ajan lupa ngegacha:3"}]}' aria-label="Last name" id="sviva" readonly>
+                        <input type="text" value='/execute @a~~~titleraw @s title {"rawtext":[{"text":" §a§lVivaSMP§r§7 I 10\n\n§a§lI§r Nama:§e "},{"selector":"@s"},{"translate":"\n§a§lI§r Ping:§e "},{"score":{"name":"*","objective":"ping"}},{"translate":"\n§a§lI§r Uang: §eRp."},{"score":{"name":"*","objective":"money"}},{"translate":"\n§a§lI§r Waktu:§e "},{"score":{"name":"*","objective":"waktu"}},{"translate":" WIB\n§a§lI§r Tps: §e"},{"score":{"name":"*","objective":"tps"}},{"translate":"\n§a§lI§r Tier: §e5"},{"translate":"\n§a§lI§r Quest: §e 6\n\n§r§ajan lupa ngegacha:3"}]}' aria-label="Last name" id="sviva" readonly>
                         <button type="button" class="btn btn-primary" onclick="svivab()">
                           copy command <span class="badge bg-secondary">viva</span>
                         </button>
@@ -81,8 +82,9 @@
               <!--start-->
               <tr>
                 <td><hr><h1>scoreboard personal</h1>
+                <img src="https://media.discordapp.net/attachments/897801206049685545/907274808608321586/Screenshot_2021_1108_212357.png" width="200"><div class="row"></div>
                   <div class="col">
-                      <input type="text" class="form-control" value='/execute @a ~~~ titleraw @s title {"rawtext":[{"text":" §bBor§e elite§r S9"},{"translate":"\n\n> §r§eName:§r "},{"selector":"@s"},{"translate":"\n> §eMoney:§r "},{"score":{"name":"*","objective":"money"}},{"translate":"\n> §eRank: §c§lYou§fTube§r\n§r"},{"translate":"\n\n§eAisbirkun.netlify.app"}]}' aria-label="Last name" id="pscore" readonly>
+                      <input type="text" value='/execute @a ~~~ titleraw @s title {"rawtext":[{"text":" §bBor§e elite§r S9"},{"translate":"\n\n> §r§eName:§r "},{"selector":"@s"},{"translate":"\n> §eMoney:§r "},{"score":{"name":"*","objective":"money"}},{"translate":"\n> §eRank: §c§lYou§fTube§r\n§r"},{"translate":"\n\n§eAisbirkun.netlify.app"}]}' aria-label="Last name" id="pscore" readonly>
                       <button type="button" class="btn btn-primary" onclick="pscoreb()">
                         copy command <span class="badge bg-secondary">personal scoreboard</span>
                       </button>
